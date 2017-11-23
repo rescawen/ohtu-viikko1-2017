@@ -13,11 +13,15 @@ import static org.junit.Assert.*;
 public class VarastoTest {
 
     Varasto varasto;
+    Varasto varasto2;
+    Varasto varasto3;
     double vertailuTarkkuus = 0.0001;
 
     @Before
     public void setUp() {
-        varasto = new Varasto(10);
+        varasto = new Varasto(10, 0);
+        varasto2 = new Varasto(0, -1);
+        varasto3 = new Varasto(5, 6);
     }
 
     @Test
@@ -33,6 +37,8 @@ public class VarastoTest {
     @Test
     public void lisaysLisaaSaldoa() {
         varasto.lisaaVarastoon(8);
+        varasto.lisaaVarastoon(-1);
+        
 
         // saldon pitäisi olla sama kun lisätty määrä
         assertEquals(8, varasto.getSaldo(), vertailuTarkkuus);
@@ -51,8 +57,14 @@ public class VarastoTest {
         varasto.lisaaVarastoon(8);
 
         double saatuMaara = varasto.otaVarastosta(2);
-
+        double saatuMaara1 = varasto.otaVarastosta(-1);
+        
+        double saldonyt = varasto.getSaldo();
+        
+        double saatuMaara2 = varasto.otaVarastosta(8);
         assertEquals(2, saatuMaara, vertailuTarkkuus);
+        assertEquals(0, saatuMaara1, vertailuTarkkuus);
+        assertEquals(saldonyt, saatuMaara2, vertailuTarkkuus);
     }
 
     @Test
@@ -63,6 +75,15 @@ public class VarastoTest {
 
         // varastossa pitäisi olla tilaa 10 - 8 + 2 eli 4
         assertEquals(4, varasto.paljonkoMahtuu(), vertailuTarkkuus);
+    }
+    
+    @Test
+    public void stringitesti() {
+        
+        String test = "saldo = " + varasto.getSaldo() + ", vielä tilaa " + varasto.paljonkoMahtuu();
+
+        // vapaata tilaa pitäisi vielä olla tilavuus-lisättävä määrä eli 2
+        assertEquals(test, varasto.toString());
     }
 
 }
