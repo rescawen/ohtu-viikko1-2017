@@ -1,3 +1,3 @@
 # ohtu-viikko1-2017
-asdasdsad muutos
 
+[![Build Status](https://travis-ci.org/rescawen/ohtu-viikko1-2017.svg?branch=master)](https://travis-ci.org/rescawen/ohtu-viikko1-2017)
