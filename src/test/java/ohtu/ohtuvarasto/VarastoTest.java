@@ -37,7 +37,7 @@ public class VarastoTest {
     @Test
     public void lisaysLisaaSaldoa() {
         varasto.lisaaVarastoon(8);
-        varasto.lisaaVarastoon(-1);
+        //varasto.lisaaVarastoon(-1);
         
 
         // saldon pitäisi olla sama kun lisätty määrä
@@ -80,9 +80,9 @@ public class VarastoTest {
     @Test
     public void stringitesti() {
         
-        String test = "saldo = " + varasto.getSaldo() + ", vielä tilaa " + varasto.paljonkoMahtuu();
+        String test = "sldo = " + varasto.getSaldo() + ", vielä tilaa " + varasto.paljonkoMahtuu();
 
-        // vapaata tilaa pitäisi vielä olla tilavuus-lisättävä määrä eli 2
+         //vapaata tilaa pitäisi vielä olla tilavuus-lisättävä määrä eli 2
         assertEquals(test, varasto.toString());
     }
 
