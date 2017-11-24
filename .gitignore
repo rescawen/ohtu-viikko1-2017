@@ -3,3 +3,4 @@ build/
 gradle.properties
 
 /.nb-gradle/
+/RiippuvuuksienInjektointi1/.nb-gradle/
