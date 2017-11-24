@@ -80,7 +80,7 @@ public class VarastoTest {
     @Test
     public void stringitesti() {
         
-        String test = "sldo = " + varasto.getSaldo() + ", vielä tilaa " + varasto.paljonkoMahtuu();
+        String test = "saldo = " + varasto.getSaldo() + ", vielä tilaa " + varasto.paljonkoMahtuu();
 
          //vapaata tilaa pitäisi vielä olla tilavuus-lisättävä määrä eli 2
         assertEquals(test, varasto.toString());
