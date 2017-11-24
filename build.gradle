@@ -38,8 +38,8 @@ jar {
 
 apply plugin: "jacoco" 
 
-<<<<<<< HEAD
-=======
+
+
 jacocoTestReport {
     reports {
         xml.enabled true
@@ -52,4 +52,4 @@ jacocoTestReport {
         })
     }
 }
->>>>>>> ebf6cdc210b25ed2602c050b91ca16b163cd3b1b
+
